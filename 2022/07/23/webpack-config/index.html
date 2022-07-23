@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+    
+    
+    
+    
+
+
+    <!-- meta -->
+
+
+<title>webpack-config | Hexo</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="webpack + react + ts + scss hello 1.进入对应的文件夹，初始化项目 npm init -y 安装webpack webpack-cli 2.创建src文件夹,添加index.js 3.安装babel-loader,建立webpack.config.js文件并配置入口,出口,等例如 123456789101112131415161718import path fro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack-config">
+<meta property="og:url" content="http://example.com/2022/07/23/webpack-config/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="webpack + react + ts + scss hello 1.进入对应的文件夹，初始化项目 npm init -y 安装webpack webpack-cli 2.创建src文件夹,添加index.js 3.安装babel-loader,建立webpack.config.js文件并配置入口,出口,等例如 123456789101112131415161718import path fro">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-23T10:57:55.000Z">
+<meta property="article:modified_time" content="2022-07-23T11:46:06.747Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="this.media='all'">
+        
+    
+
+    
+    
+
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+    <body>
+        <div id="app" tabindex="-1">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">马俐的博客</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        webpack-config
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2022/07/" class="post-meta__date button">2022-07-23</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h1 id="webpack-react-ts-scss-hello"><a href="#webpack-react-ts-scss-hello" class="headerlink" title="webpack + react + ts + scss hello"></a>webpack + react + ts + scss hello</h1><p> 1.进入对应的文件夹，初始化项目 npm init -y 安装webpack webpack-cli</p>
+<p>2.创建src文件夹,添加index.js</p>
+<p>3.安装babel-loader,建立webpack.config.js文件并配置入口,出口,等例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import path from &quot;path&quot;;</span><br><span class="line"> const config = &#123;</span><br><span class="line">        entry:  &quot;./src/index.js&quot;,</span><br><span class="line">        output: &#123;</span><br><span class="line">          path: path.resolve(__dirname, &quot;dist&quot;),</span><br><span class="line">          filename: &quot;main.js&quot;,</span><br><span class="line">         &#125;,</span><br><span class="line">        mode: &quot;production&quot;,</span><br><span class="line">         module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.js$/,</span><br><span class="line">        use: &#123;</span><br><span class="line">          loader: &quot;babel-loader&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p>4.在package.json 配置webpack打包命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">“scripts”: &#123;</span><br><span class="line">“test”: “echo &quot;Error: no test specified&quot; &amp;&amp; exit 1”,</span><br><span class="line">“build”: “webpack”</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>5.安装webpack-dev-server,配置启动命令,运行npm run dev查看页面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">“scripts”: &#123;</span><br><span class="line">“test”: “echo &quot;Error: no test specified&quot; &amp;&amp; exit 1”,</span><br><span class="line">“build”: “webpack”,</span><br><span class="line">“dev”: “webpack server –open”</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>6.配置渲染的html模板,在src下建一个index.html,安装html-webpack-plugin，并在webpack.config.js进行配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-webpack.config.js- import WebpackHtmlPlugin from &quot;html-webpack-plugin&quot; plugins: [new WebpackHtmlPlugin(&#123; template: &quot;./src/index.html&quot; &#125;)],`</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>7.安装react react-dom,向项目中集成react(react 18.0版本的写法),安装@babel&#x2F;preset-env, @babel&#x2F;preset-react,将index.js文件改为在index.jsx,入口也要记得改为jsx,在index.jsx中写入如下代码,在webpack.config.js中添加jsx的配置,打包后运行会在页面上展示hello world</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-index.jsx- let root = document.getElementById(&quot;root&quot;); ReactDOM.createRoot(root).render(</span><br><span class="line">hello world</span><br><span class="line">); -webpack.config.js- entry: &quot;./src/index.jsx&quot;, -module use添加- &#123; test: /\.jsx?$/, use: [ &#123; loader: &quot;babel-loader&quot;, options: &#123; presets: [&quot;@babel/preset-env&quot;, &quot;@babel/preset-react&quot;], &#125;, &#125;, ], &#125;,</span><br></pre></td></tr></table></figure>
+<p>8.集成ts,需要安装typescript ,ts-loader,将jsx改为tsx,入口要要改为tsx,webpack.config.js添加配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">entry: &quot;./src/index.tsx&quot;, &#123; test: /\.tsx?$/, use: [&quot;ts-loader&quot;], &#125;, resolve: &#123; extensions: [&quot;.ts&quot;, &quot;.tsx&quot;, &quot;.js&quot;, &quot;.jsx&quot;], &#125;,</span><br></pre></td></tr></table></figure>
+<p>9.集成scss,除了要安装css-loader style-loader还需要安装sass-loader sass,在webpack.config.js添加配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; test: /\.scss$/i, exclude: /\.module\.scss$/i, use: [ &#123; loader: &quot;style-loader&quot;, &#125;, &#123; loader: &quot;css-loader&quot;, &#125;, &#123; loader: &quot;sass-loader&quot;, &#125;, ], &#125;</span><br></pre></td></tr></table></figure>
+<p>配置好之后,在引入scss文件的时候可能会出现找不到模块,此时要添加对应的文件index.d.ts,typings.d.ts</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-index.d.ts- declare module &#x27;*.scss&#x27; &#123; const content: &#123; [key: string]: any &#125; export = content &#125; -typings.d.ts- declare module &#x27;*.scss&#x27;;</span><br></pre></td></tr></table></figure>
+<p>在配置的过程中遇到,className配置未生效,需要配置css-loader的扩展 ,此外配置的顺序也不能乱，依次是style-loader css-loader sass-loader</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; loader: &quot;css-loader&quot;, options: &#123; modules: true, esModule: true &#125; &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>10.将webpack.config.js改为webpack.config.ts(参考 <a target="_blank" rel="noopener" href="https://webpack.docschina.org/configuration/configuration-languages/#typescript">https://webpack.docschina.org/configuration/configuration-languages/#typescript</a>)<br> 10-1.安装 npm install –save-dev typescript ts-node @types&#x2F;node @types&#x2F;webpack<br> 10-2. 给config添加类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const config: webpack.Configuration = &#123; mode: &#x27;production&#x27;, entry: &#x27;./foo.js&#x27;, output: &#123; path: path.resolve(__dirname, &#x27;dist&#x27;), filename: &#x27;foo.bundle.js&#x27;, &#125;, &#125;;</span><br><span class="line">export default config;</span><br></pre></td></tr></table></figure>
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2022-07-23</p></div> 
+    <div class="post-entry__tags"></div> 
+</article>
+
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2022 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>
