@@ -11,3 +11,8 @@ eg:
 ```
 <div contenteditable="true"></div>
 ```
+# 丝滑的滚动
+eg: scroll-behavior:smooth;
+或者通过js操作，ele.scrollIntoView({
+    behavior:'smooth's
+})
